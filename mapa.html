@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mapa</title>
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyAaafunzwrnfARG6ED_d5UBESj6uMvsjkc"></script>
+    <script>
+        function zaladujmape(){
+            //tworzę obiekt ze spółrzędnymi środka mojej mapy
+            var wspolrzedne = new google.maps.LatLng(54.269734, 18.626852);
+            //tworzę opcje mapy
+            var opcjemapy = {
+                zoom: 16,
+                center: wspolrzedne,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var mapa = new google.maps.Map(document.getElementById("mapka"), opcjemapy);
+        }
+    </script>
+</head>
+<body onload="zaladujmape();">
+    <!--tutaj bezie moja mapka-->
+    <div id="mapka" style="width: 700px; height: 500px; border: 1px solid black; background: pink;"></div>    
+
+</body>
+</html>

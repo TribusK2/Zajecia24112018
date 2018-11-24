@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LocalStorage</title>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script>
+      // sprawdzenie czy przeglądarka wspiera LocalStorage
+      if(localStorage) {
+          //wykonaj kod gdy dokument jest załadowany
+          $(document).ready(function(){
+              //wypisanie tekstu powitalnego razem z elementem localstorage
+              $("h1").text("Witaj "+localStorage.getItem("wpisaneimie"));
+              //w momencie klikniecia przycisku zapisz
+              $("#zapisz").click(function(){
+                  //pobranie imienia z pola input i umieszczenie w zmiennej imie
+                  var imie = $("#imie").val();
+                  // zapisanie w localStorage
+                  localStorage.setItem("wpisaneimie", imie);
+                  alert("twoje imie zapisane");
+              });
+              $("#pobierz").click(function(){
+                  //pobieram dane
+                  alert("Witaj "+localStorage.getItem("wpisaneimie"));
+              })
+          });
+      }else{
+          alert("Twoja przeglądarka nie wspiera LocalStorage")
+      }
+  </script>
+</head>
+<body>
+    <h1></h1>
+    <form>
+        <label for="imie">Imie:</label>
+        <input type="text" name="imie" id="imie">
+        <button id="zapisz">Zapisz imię</button>
+        <button id="pobierz">Wyświetl imię</button>
+    </form>
+</body>
+</html>

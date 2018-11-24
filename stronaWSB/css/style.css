@@ -1,0 +1,153 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5em;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+header{
+    background: #35424a;
+    color: whitesmoke;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: 3px solid orangered;
+}
+header a{
+    color: whitesmoke;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+header ul{
+    margin: 0;
+    padding: 0;
+}
+header li{
+    display: inline;
+    padding: 0 20px;
+}
+#branding{
+    float: left;
+}
+#branding h1{
+    margin: 0;
+    padding-bottom: 3px;
+}
+header nav{
+    float: right;
+}
+.hightlight{
+    color: skyblue;
+    font-weight: bold;
+}
+header a:hover{
+    color: aquamarine;
+}
+#showcase{
+    min-height: 400px;
+    background: url("../img/headerbg.jpg") no-repeat 0 -400px;
+    text-align: center;
+    color: whitesmoke;
+}
+#showcase h1{
+    margin-top: 100px;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+#showcase p{
+    font-size: 20px;
+}
+#newsletter{
+    padding: 15px;
+    color: whitesmoke;
+    background: #35424a;
+}
+#newsletter h1{
+    float: left;
+}
+#newsletter form{
+    float: right;
+    margin-top: 15px;
+}
+#newsletter input[type="email"]{
+    padding: 4px;
+    height: 15px;
+    width: 200px;
+}
+.button1{
+    height: 28px;
+    background: skyblue;
+    border: 0;
+    outline: 0;
+    padding: 0 20px;
+    color: whitesmoke;
+}
+#boxes{
+    margin-top: 20px;
+}
+.box {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+}
+.box i{
+    font-size: 50px;
+}
+footer{
+    padding: 10px;
+    margin-top: 20px;
+    color: whitesmoke;
+    background-color: skyblue;
+    text-align: center;
+}
+@media(max-width:768px){
+    header #branding, header nav, header nav li, #newsletter h1, #newsletter form, .box, .box_about, .box_about_right{
+        float: none;
+        text-align: center;
+        width:  100%;
+        clear: both;
+    }
+    header {
+        padding-bottom: 20px;
+    }
+    #showcase h1{
+        margin-top: 40px;
+        line-height: 1.2em;
+    }
+}
+#showcase_about{
+    min-height: 400px;
+    text-align: center;
+    color: whitesmoke;
+    float: none;
+}
+.box_about {
+    float: left;
+    width: 60%;
+    padding: 10px;
+    text-align: left;
+    color: black;
+    
+}
+.dark{
+    background-color: #35424a;
+    color: whitesmoke;
+    padding: 5px 10px;
+    
+}
+.box_about_right{
+    width: 30%;
+    color: whitesmoke;
+    text-align: left;
+    background-color: #35424a;
+    margin: 10px;
+    padding: 10px;
+    float: right;
+}

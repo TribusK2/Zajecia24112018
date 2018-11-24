@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Moja pozycja</title>
+    <script>
+        function pokaz(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(function(pozycja){
+                    var wiadomosc = "Twoja pozycja to: "+
+                    pozycja.coords.latitude+" szerokości i "+
+                    pozycja.coords.longitude+" długości";
+                document.getElementById("mojemiejsce").innerHTML = wiadomosc;
+                });
+            }else{
+                alert("twoja przeglądarka nie wspiera geolokalizacji");
+            }
+        }
+    </script>
+</head>
+<body>
+    <!--Tutaj wstrzyknę koordynaty mojego miejsca-->
+    <div id="mojemiejsce"></div>
+    <button onclick="pokaz();">Pokaż moje współżędne</button>
+</body>
+</html>
